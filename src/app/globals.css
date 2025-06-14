@@ -1,0 +1,123 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'PT Sans', Arial, Helvetica, sans-serif;
+}
+
+@layer base {
+  :root {
+    /* Updated Light Theme based on logo colors (Green Primary, Yellow-Orange Accent) */
+    --background: 90 30% 96%; /* Very Light, Slightly Greenish Beige */
+    --foreground: 0 0% 15%; /* Dark Gray for text */
+
+    --card: 90 30% 98%; /* Slightly Off-White, closer to new background */
+    --card-foreground: 0 0% 15%;
+
+    --popover: 0 0% 100%; /* White */
+    --popover-foreground: 0 0% 15%;
+
+    --primary: 100 55% 45%; /* Natural Green (from logo) */
+    --primary-foreground: 100 20% 95%; /* Very Light Green/Off-White for text on primary */
+
+    --secondary: 100 40% 75%; /* Lighter, less saturated green */
+    --secondary-foreground: 100 40% 20%; /* Darker green text for the light secondary */
+
+    --muted: 90 25% 90%; /* Slightly darker than new background for muted elements */
+    --muted-foreground: 0 0% 40%; /* Medium Gray */
+
+    --accent: 47 80% 50%; /* Warm Yellow-Orange (from logo, similar to old primary) */
+    --accent-foreground: 47 80% 10%; /* Dark text for contrast on accent */
+
+    --destructive: 0 70% 55%; /* A slightly softer red */
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 90 25% 80%; /* Border color derived from new background/primary hue */
+    --input: 90 30% 94%; /* Input background, slightly different from main bg */
+    --ring: 100 55% 45%; /* New primary green for rings */
+
+    /* Updated Chart colors */
+    --chart-1: 100 50% 50%; /* Primary-like green */
+    --chart-2: 47 70% 55%;  /* Accent-like yellow-orange */
+    --chart-3: 100 40% 65%; /* Lighter green */
+    --chart-4: 47 60% 65%;  /* Lighter yellow-orange */
+    --chart-5: 90 20% 50%;   /* Neutral, slightly greenish gray */
+    
+    --radius: 0.5rem;
+
+    /* Updated Sidebar specific colors - Light Theme */
+    --sidebar-background: 90 30% 94%;
+    --sidebar-foreground: 0 0% 15%; 
+    --sidebar-primary: 100 55% 45%; 
+    --sidebar-primary-foreground: 100 20% 95%; 
+    --sidebar-accent: 47 80% 50%; 
+    --sidebar-accent-foreground: 47 80% 10%; 
+    --sidebar-border: 90 25% 78%; 
+    --sidebar-ring: 100 55% 45%;
+  }
+
+  .dark {
+    /* Updated Dark Theme based on logo colors */
+    --background: 100 10% 15%; /* Dark, Slightly Desaturated Green */
+    --foreground: 90 20% 90%; /* Light, Slightly Greenish Off-White */
+
+    --card: 100 10% 18%; /* Slightly lighter than dark background */
+    --card-foreground: 90 20% 90%;
+
+    --popover: 100 10% 18%;
+    --popover-foreground: 90 20% 90%;
+
+    --primary: 100 50% 55%; /* Brighter Green for dark mode */
+    --primary-foreground: 100 20% 95%; /* Very Light for contrast */
+
+    --secondary: 100 30% 30%; /* Darker, less saturated secondary green */
+    --secondary-foreground: 100 30% 80%;
+
+    --muted: 100 10% 22%;
+    --muted-foreground: 90 15% 60%;
+
+    --accent: 47 70% 60%; /* Brighter Yellow-Orange for dark mode */
+    --accent-foreground: 47 80% 10%; 
+    
+    --destructive: 0 60% 50%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 100 10% 25%;
+    --input: 100 10% 20%;
+    --ring: 100 50% 55%; /* Primary green for rings */
+
+    /* Updated Dark Chart colors */
+    --chart-1: 100 45% 60%; /* Green */
+    --chart-2: 47 65% 60%;  /* Yellow-Orange */
+    --chart-3: 100 35% 70%; /* Lighter Green */
+    --chart-4: 47 55% 70%;  /* Lighter Yellow-Orange */
+    --chart-5: 90 15% 55%;   /* Neutral Grayish Green */
+
+    /* Updated Dark Sidebar specific colors */
+    --sidebar-background: 100 10% 12%; 
+    --sidebar-foreground: 90 20% 85%; 
+    --sidebar-primary: 100 50% 55%;
+    --sidebar-primary-foreground: 100 20% 95%;
+    --sidebar-accent: 47 70% 60%;
+    --sidebar-accent-foreground: 47 80% 10%;
+    --sidebar-border: 100 10% 22%;
+    --sidebar-ring: 100 50% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  main {
+    flex-grow: 1;
+  }
+}
